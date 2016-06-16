@@ -1,2 +1,3 @@
-# react-auth
+![logo](icon-60.png)
+# ![logo](icon-60.png) react-auth
 Authentication for React.
