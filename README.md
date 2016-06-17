@@ -1,5 +1,3 @@
-![Project Logo](https://lh6.googleusercontent.com/-YmfKZZLZKL0/U-KVPFSbiOI/AAAAAAAAEZA/maoYT8iJCnA/w1089-h513-no/sshot-1.png)
-
 # [ReactAuth](https://github.com/react-auth/react-auth/)
 
 **Live Demo:** http://reactauth.com/demo/
