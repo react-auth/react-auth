@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React Auth - A JavaScript library for adding user authentication to React apps</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:secure_url" content="">
+
+    <link rel="shortcut icon" type="image/png" href="img/icons/icon-32.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="img/icons/icon-128-dark.svg">
+          ReactAuth
+        </div>
+
+        <div class="github">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </div>
+
+        <p>
+          <img src="img/icons/icon-128-dark.svg">
+        </p>
+
+        <h1>
+          Simple user authentication<br>
+          for React apps
+        </h1>
+
+        <p class="description">
+          ReactAuth is a JavaScript library for adding user authentication to React apps.
+          Add logic for login, signup, social login, sessions, etc. in a few minutes.
+        </p>
+
+        <pre class="console">
+          <span class="prompt">$</span> npm install react-auth
+        </pre>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <a class="github-button" href="https://github.com/react-auth/react-auth" data-icon="octicon-star" data-style="mega" data-count-href="/react-auth/react-auth/stargazers" data-count-api="/repos/react-auth/react-auth#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star react-auth/react-auth on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/react-auth/react-auth/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/react-auth/react-auth/network" data-count-api="/repos/react-auth/react-auth#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork react-auth/react-auth on GitHub">Fork</a>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>What is ReactAuth?</h2>
+        <p>
+          ReactAuth is a module that provides routes and components for React that will allow you to solve common user management tasks such as login and signup.
+        </p>
+      </div>
+      <div class="container">
+        <h2>Install</h2>
+        <p>
+          You can install ReactAuth using npm:
+        </p>
+        <code>
+          <span class="prompt">$</span> npm install react-auth --save
+        </code>
+      </div>
+      <div class="container">
+        <h2>Usage</h2>
+        <p>
+          Include ReactAuth and its components into your app:
+        </p>
+        <code>
+          // Using ES6.<br>
+          import ReactAuth, { Router, AuthenticatedRoute, LoginLink } from 'react-auth';<br>
+          <br>
+          // Not using ES6.<br>
+          var ReactAuth = require('react-auth').default;<br>
+          var Router = require('react-auth').Router;<br>
+          var AuthenticatedRoute = require('react-auth').AuthenticatedRoute;<br>
+          var LoginLink = require('react-auth').LoginLink;<br>
+          <br>
+          // Or if you are using it from a browser without UMD.<br>
+          var Router = ReactAuth.Router;<br>
+          var AuthenticatedRoute = ReactAuth.AuthenticatedRoute;<br>
+          var LoginLink = ReactAuth.LoginLink;
+        </code>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="copyright">
+          &copy; 2016 Stormpath
+        </div>
+      </div>
+    </footer>
+
+    <link rel="stylesheet" href="css/highlight/default.css">
+    <script src="js/highlight.pack.js"></script>
+    <script type="text/javascript">
+      hljs.configure({
+        languages: ['javascript', 'html']
+      });
+
+      codeBlocks = document.getElementsByTagName('code');
+
+      for (var i = 0; i < codeBlocks.length; ++i) {
+        hljs.highlightBlock(codeBlocks[i]);
+      }
+    </script>
+  </body>
+</html>

@@ -1,3 +1,0 @@
-# Contributing
-
-N/A
