@@ -106,8 +106,34 @@ p {
   line-height: 1.5;
 }
 
+ul li {
+  padding-top: 12px;
+}
+
+a,
+a:visited {
+  color: #43D1EF;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  border-bottom: 1px solid #43D1EF;
+}
+
 strong {
   font-weight: 400;
+}
+
+a.code,
+a.code:visited {
+  background: #F2F5F5;
+  border-radius: 2px;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  color: #757575;
+  padding: 3px 7px;
+  font-size: 14px;
 }
 
 code {

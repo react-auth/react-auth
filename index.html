@@ -44,12 +44,12 @@
         </h1>
 
         <p class="description">
-          ReactAuth is a JavaScript library for adding user authentication to React apps.
-          Add logic for login, signup, social login, sessions, etc. in a few minutes.
+          ReactAuth is an extendable module for adding user authentication to your React app.
+          Add login and signup forms in just a few minutes.
         </p>
 
         <pre class="console">
-          <span class="prompt">$</span> npm install react-auth
+          <span class="prompt">$</span> npm install react-auth --save
         </pre>
       </div>
     </header>
@@ -63,7 +63,7 @@
       <div class="container">
         <h2>What is ReactAuth?</h2>
         <p>
-          <strong>ReactAuth</strong> is a simple to use authentication module for React with built-in support for login (username/password and social), registration, forgotten password, and more.
+          <strong>ReactAuth</strong> is an extendable, simple to use authentication module for React for login (username/password and social), registration, forgotten password, and more.
         </p>
       </div>
       <div class="container">
@@ -88,23 +88,107 @@
       <div class="container">
         <h2>Usage</h2>
         <p>
-          Include <strong>ReactAuth</strong> and its components into your app:
+          1. Include <strong>ReactAuth</strong> and its components into your app:
         </p>
         <code>
           // Using ES6.<br>
-          import ReactAuth, { Router, AuthenticatedRoute, LoginLink } from 'react-auth';<br>
+          import ReactAuth, { LoginForm } from 'react-auth';<br>
           <br>
           // Not using ES6.<br>
           var ReactAuth = require('react-auth').default;<br>
-          var Router = require('react-auth').Router;<br>
-          var AuthenticatedRoute = require('react-auth').AuthenticatedRoute;<br>
-          var LoginLink = require('react-auth').LoginLink;<br>
+          var LoginForm = require('react-auth').LoginForm;<br>
           <br>
           // Or if you are using it from a browser without UMD.<br>
-          var Router = ReactAuth.Router;<br>
-          var AuthenticatedRoute = ReactAuth.AuthenticatedRoute;<br>
-          var LoginLink = ReactAuth.LoginLink;
+          var LoginForm = ReactAuth.LoginForm;
         </code>
+
+        <p>
+          2. Initialize the module:
+        </p>
+        <code>
+          ReactAuth.init({<br>
+          &nbsp;&nbsp;// See the Configuration section for how to configure ReactAuth.<br>
+          });
+        </code>
+
+        <p>
+          3. Add components to your page:
+        </p>
+        <code>
+          class LoginPage extends React.Component {<br>
+          &nbsp;&nbsp;render() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return (<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="login-page"&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;LoginForm /&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;);<br>
+          &nbsp;&nbsp;}<br>
+          }
+        </code>
+      </div>
+      <div class="container">
+        <h2>Configuration</h2>
+        <p>
+          Below is a complete list of all configuration options.
+        </p>
+        <code>
+          // Configure ReactAuth with your own AuthProvider.<br>
+          ReactAuth.init({<br>
+          &nbsp;&nbsp;authProvider: customAuthProvider<br>
+          });<br>
+          <br>
+          // Configure ReactAuth with a specific/supported AuthProvider.<br>
+          // Supported providers currently are 'stormpath' or 'default'.<br>
+          ReactAuth.init({<br>
+          &nbsp;&nbsp;authProvider: {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;use: 'stormpath'<br>
+          &nbsp;&nbsp;}<br>
+          });
+        </code>
+      </div>
+      <div class="container">
+        <h2>Components</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#authenticated" class="code">Authenticated</a> — Show content only when logged in.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#notauthenticated" class="code">NotAuthenticated</a> — Show content only when logged out.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#socialloginlink" class="code">SocialLoginLink</a> — Link to login with a social provider, such as Facebook.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#socialloginbutton" class="code">SocialLoginButton</a> — Button to login with a social provider, such as Facebook.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#logoutlink" class="code">LogoutLink</a> — Link to end a session and log out.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#loginform" class="code">LoginForm</a> — Component to create a login form.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#signupform" class="code">SignupForm</a> — Component to create a signup form.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#resetpasswordform" class="code">ResetPasswordForm</a> — Component to create a reset password form.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#changepasswordform" class="code">ChangePasswordForm</a> — Component to create a change password form.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#userprofileform" class="code">UserProfileForm</a> — Component to create a user profile form.
+          </li>
+          <li>
+            <a href="https://github.com/react-auth/react-auth#verifyemailview" class="code">VerifyEmailView</a> — Component to create a view for email verification.
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>API Reference</h2>
+        <p>
+          Read the full <a href="https://github.com/react-auth/react-auth#api-reference">API documentation</a> at GitHub.
+        </p>
       </div>
     </section>
     <footer>
