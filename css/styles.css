@@ -153,12 +153,19 @@ code {
   padding-right: 4px;
 }
 
-.github {
+a.github,
+a.github:visited {
   position: absolute;
   right: 0;
   top: -30px;
   color: #272821;
   font-size: 22px;
+}
+a.github:hover,
+a.github:focus,
+a.github:active {
+  border: none;
+  color: #000000;
 }
 
 .btn {
@@ -230,6 +237,31 @@ pre.console .prompt {
 section pre.console {
   box-shadow: none;
   width: 100%;
+}
+
+.love {
+  position: absolute;
+  right: 0;
+  z-index: 20;
+}
+.love a {
+  position: relative;
+  color: #BBBACA;
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease-out;
+  -moz-transition: color 0.1s ease-out;
+  -o-transition: color 0.1s ease-out;
+  transition: color 0.1s ease-out;
+}
+.love a > span:first-child {
+  padding-right: 22px;
+}
+.love a .heart {
+  color: #E25151;
+  padding: 0 2px;
+  position: absolute;
+  top: 2px;
+  margin-left: -20px;
 }
 
 .animated {
