@@ -13,12 +13,15 @@ with built-in support for login (username/password and social), registration, fo
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Authentication Flow](#authentication-flow)
- - [Login with Email and Password](#-login-with-email-and-password)
+ - [Login with Credentials](#-login-with-credentials)
  - [Login with Social Provider](#-login-with-social-provider)
  - [Logout](#-log-out)
 - [Authentication Providers](#authentication-providers)
  - [Default](#-default)
  - [Stormpath](#-stormpath)
+ - [Create your own](#-create-your-own	)
+- [Integrations](#integrations)
+ - [ReactRouter](#-reactrouter) 
 - [Components](#components)
 - [API Reference](#api-reference)
 - [License](#license)
@@ -100,9 +103,71 @@ ReactAuth.init({
 
 ## Authentication Flow
 
+### Login with Credentials
+
+This describes how the credentials (username/password) login flow works.
+
+### Login with Social Provider
+
+This describes how the social provider (facebook, google, github) login flow works.
+
+### Logout
+
+This describes how the logout flow works.
+
 ## Authentication Providers
 
+### Default
+
+Authenticate using your own REST API.
+
+```js
+ReactAuth.init({
+	// Below is what is being used when you don't configure the authProvider.
+	authProvider: {
+		use: 'default'
+	}
+});
+```
+### Stormpath
+
+Authenticate using Stormpath - The Identity and User Management API.
+
+```js
+ReactAuth.init({
+	authProvider: {
+		use: 'stormpath'
+	}
+});
+```
+
+### Create your own
+
+Currently not available. See the `StormpathAuthProvider` for a reference implementation.
+
+## Integrations
+
+### ReactRouter
+
+- [`Router`](#router)
+- [`HomeRoute`](#router)
+- [`AuthenticatedRoute`](#router)
+- [`LoginRoute`](#router)
+- [`LogoutRoute`](#router)
+
 ## Components
+
+- [`Authenticated`](#authenticated)
+- [`NotAuthenticated`](#notauthenticated)
+- [`SocialLoginLink`](#socialloginlink)
+- [`SocialLoginButton`](#socialloginbutton)
+- [`LogoutLink`](#logoutlink)
+- [`LoginForm`](#loginform)
+- [`SignupForm`](#signupform)
+- [`ResetPasswordForm`](#resetpasswordform)
+- [`ChangePasswordForm`](#changepasswordform)
+- [`UserProfileForm`](#userprofileform)
+- [`VerifyEmailView`](#verifyemailview)
 
 ## API Reference
 
