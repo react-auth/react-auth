@@ -14,9 +14,12 @@ with built-in support for login (username/password and social), registration, fo
 - [Configuration](#configuration)
 - [Authentication Flow](#authentication-flow)
  - [Login with Email and Password](#-login-with-email-and-password)
- - [Login with OAuth 1.0](#-login-with-oauth-10)
- - [Login with OAuth 2.0](#-login-with-oauth-20)
+ - [Login with Social Provider](#-login-with-social-provider)
  - [Logout](#-log-out)
+- [Authentication Providers](#authentication-providers)
+ - [Default](#-default)
+ - [Stormpath](#-stormpath)
+- [Components](#components)
 - [API Reference](#api-reference)
 - [License](#license)
 
@@ -96,6 +99,10 @@ ReactAuth.init({
 ```
 
 ## Authentication Flow
+
+## Authentication Providers
+
+## Components
 
 ## API Reference
 
