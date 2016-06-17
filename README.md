@@ -14,8 +14,6 @@ with built-in support for login (username/password and social), registration, fo
 - [Configuration](#configuration)
 - [Authentication Flow](#authentication-flow)
  - [Login with Email and Password](#-login-with-email-and-password)
- - [Login with OAuth 1.0](#-login-with-oauth-10)
- - [Login with OAuth 2.0](#-login-with-oauth-20)
  - [Logout](#-log-out)
 - [API Reference](#api-reference)
 - [License](#license)
