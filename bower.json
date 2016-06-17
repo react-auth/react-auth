@@ -1,0 +1,29 @@
+{
+  "name": "react-auth",
+  "version": "1.0.0",
+  "main": [
+    "dist/react-auth.min.js"
+  ],
+  "keywords": [
+    "jwt",
+    "token",
+    "user",
+    "react",
+    "token based authentication",
+    "authentication",
+    "login",
+    "password",
+    "registration",
+    "signup",
+    "user management"
+  ],
+  "ignore": [
+    ".tmp",
+    "build",
+    "docs",
+    "example",
+    "src"
+  ],
+  "dependencies": {
+  }
+}
