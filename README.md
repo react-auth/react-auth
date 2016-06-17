@@ -151,16 +151,16 @@ Sign in using Email and Password.
 ##### Usage
 
 ```js
-import { login } from 'react-auth/actions';
+import { loginWithCredentials } from 'react-auth/actions';
 
 let user = {
   email: 'my@email.com',
   password: 'my password'
 };
 
-login(user)
-  .then(function(response) {
-    // Redirect user here after a successful log in.
+loginWithCredentials(user)
+  .then(function(session) {
+    // E.g. redirect user here after a successful log in.
   })
   .catch(function(response) {
     // Handle errors here, such as displaying a notification
@@ -187,20 +187,16 @@ Redirects automatically to the social provider for authentication.
 ##### Usage
 
 ```js
-import { login } from 'react-auth/actions';
+import { loginWithSocialProvider } from 'react-auth/actions';
 
-let user = {
-  email: 'my@email.com',
-  password: 'my password'
+let options = {
+  providerId: 'google'
 };
 
-login(user)
-  .then(function(response) {
-    // Redirect user here after a successful log in.
-  })
-  .catch(function(response) {
+loginWithSocialProvider(options)
+  .catch(function(err) {
     // Handle errors here, such as displaying a notification
-    // for invalid email and/or password.
+    // for invalid provider options.
   });
 ```
 
